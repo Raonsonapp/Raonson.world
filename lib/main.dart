@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material.dart';
 import ns/home_screen.dart';
 import 'screens/reels_screen.dart';
 import 'screens/chatgpt_screen.dart';
