@@ -48,3 +48,8 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/lottie/
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  in_app_purchase: ^3.1.7
