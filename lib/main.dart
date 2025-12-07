@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import ns/home_screen.dart';
 import 'screens/reels_screen.dart';
 import 'screens/chatgpt_screen.dart';
 import 'screens/king_ai_screen.dart';
