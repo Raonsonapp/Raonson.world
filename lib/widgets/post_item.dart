@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import '../widgets/verified_badge.dart';
 
 class PostItem extends StatelessWidget {
   final String username;
   final String avatar;
-  final bool verified;
   final String image;
 
-  const PostItem({
-    super.key,
-    required this.username,
-    required this.avatar,
-    required this.verified,
-    required this.image,
-  });
+  PostItem({required this.username, required this.avatar, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +13,17 @@ class PostItem extends StatelessWidget {
       children: [
         ListTile(
           leading: CircleAvatar(backgroundImage: NetworkImage(avatar)),
-          title: Row(
-            children: [
-              Text(username),
-              if (verified) const SizedBox(width: 5),
-              if (verified) const VerifiedBadge(),
-            ],
-          ),
+          title: Text(username),
+          trailing: Icon(Icons.more_vert),
         ),
         Image.network(image),
+        Row(
+          children: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.favorite_border)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.comment_outlined)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.send)),
+          ],
+        )
       ],
     );
   }
